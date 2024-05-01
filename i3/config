@@ -220,7 +220,7 @@ font pango:"VictorMono Nerd Font Mono Medium 8"
 #exec --no-startup-id ~/Games/Discord/Discord
 exec --no-startup-id xrandr --output HDMI-1 --primary
 exec --no-startup-id xrandr --output VGA-1 --mode 1280x1024 --rate 75
-exec --no-startup-id xrandr --output HDMI-1 --mode 1290x1024 --rate 75
+exec --no-startup-id xrandr --output HDMI-1 --mode 1280x1024 --rate 75
 exec --no-startup-id xset s off
 exec --no-startup-id xset -dpms
 exec --no-startup-id numlockx off
