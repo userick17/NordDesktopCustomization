@@ -204,34 +204,31 @@ client.placeholder      #2e3440 #2e3440 #ffffff #2e3440   #2e3440
 client.background       #2e3440
 
 #gaps
-gaps inner 0
+gaps inner 10
 
 
 #remove borders
-for_window [class=".*"] border pixel 1
+for_window [class=".*"] border pixel 2
 default_border pixel 0
 default_floating_border pixel 0
 
-font pango:"VictorMono Nerd Font Mono Medium 8"
+#font pango:"VictorMono Nerd Font Mono Medium 8"
 
 
 
 # starup apps/comands
-#exec --no-startup-id ~/Games/Discord/Discord
-exec --no-startup-id xrandr --output HDMI-1 --primary
-exec --no-startup-id xrandr --output VGA-1 --mode 1280x1024 --rate 75
-exec --no-startup-id xrandr --output HDMI-1 --mode 1280x1024 --rate 75
+#exec --no-startup-id xrandr --output HDMI-1 --primary
+#exec --no-startup-id xrandr --output VGA-1 --mode 1280x1024 --rate 75
+#exec --no-startup-id xrandr --output HDMI-1 --mode 1280x1024 --rotate left --rate 75
+exec --no-startup-id xrandr --output HDMI-1 --rotate left
 exec --no-startup-id xset s off
 exec --no-startup-id xset -dpms
 exec --no-startup-id numlockx off
-#exec  --no-startup-id picom
-#exec --no-startup-id xfce4-panel
 exec --no-startup-id polybar
 exec --no-startup-id xset led 3
+exec --no-startup-id setxkbmap br
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id flameshot
-#exec --no-startup-id xfce4-power-manager
-#exec --no-startup-id plank
+
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status
