@@ -1,12 +1,3 @@
-/**
- * Nordic rofi theme
- * Adapted by undiabler <undiabler@gmail.com>
- *
- * Nord Color palette imported from https://www.nordtheme.com/
- *
- */
-
-
 * {
 	nord0: #2e3440;
 	nord1: #3b4252;
@@ -30,22 +21,23 @@
 
     foreground:  @nord9;
     backlight:   #ccffeedd;
-    background-color:  @nord1;
+    background-color:  transparent;
     
     highlight:     underline bold #eceff4;
+
+    transparent: rgba(46,52,64,1.0);
 }
 
 window {
     location: center;
     anchor:   center;
-    transparency: "screenshot";
     padding: 0px;
     border:  0px;
-    border-radius: 0px;
-
     spacing: 0;
     children:  [mainbox];
     orientation: horizontal;
+    width: 500px;
+    height: 200px;
 }
 
 mainbox {
@@ -67,7 +59,6 @@ inputbar {
     background-color: #3b4252;
 
     border: 1px;
-    border-radius:  0px;
     border-color: @nord10;
 }
 
@@ -82,18 +73,15 @@ prompt {
 
 listview {
     padding: 8px;
-    border-radius: 0px;
     border-color: @nord10;
     border: 0px 1px 1px 1px;
-    background-color: rgba(46,52,64,0.9);
+    background-color: rgba(46,52,64,1.0);
     dynamic: false;
 }
 
 element {
     padding: 3px;
     vertical-align: 0.5;
-    border-radius: 0px;
-    background-color: transparent;
     color: @foreground;
     text-color: rgb(216, 222, 233);
 }
@@ -114,11 +102,19 @@ button {
     horizontal-align: 0.5;
 
     border: 2px 0px 2px 2px;
-    border-radius: 0px;
     border-color: @foreground;
 }
 
 button selected normal {
     border: 2px 0px 2px 2px;
     border-color: @foreground;
+}
+
+textbox {
+    padding: 8px;
+    border-color: @nord10;
+    border: 1px 1px 1px 1px;
+    background-color: rgba(46,52,64,1);
+    dynamic: true;
+    text-color: @backlight;
 }
